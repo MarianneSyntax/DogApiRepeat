@@ -9,14 +9,13 @@ import androidx.recyclerview.widget.RecyclerView
 import coil.load
 import com.example.dogapirepeat.R
 import com.example.dogapirepeat.data.model.Breed
+import com.example.dogapirepeat.data.remote.Repository
+import com.example.dogapirepeat.ui.main.MainFragmentDirections
 
 class BreedAdapter() : RecyclerView.Adapter<BreedAdapter.ItemViewHolder>() {
-    private var dataset = listOf<Breed>(
-        Breed("Pug","https://images.dog.ceo//breeds//pug//n02110958_11239.jpg"),
-        Breed("Beagle", "https://images.dog.ceo/breeds/beagle/n02088364_10108.jpg"),
-        Breed("French Bulldog", "https://images.dog.ceo/breeds/bulldog-french/n02108915_1119.jpg"),
-        Breed("Weimaraner", "https://images.dog.ceo/breeds/weimaraner/n02092339_284.jpg"),
-    )
+    private var repo = Repository()
+    private var dataset = repo.dataset
+
 
     inner class ItemViewHolder(view: View): RecyclerView.ViewHolder(view){
         val breedImage: ImageView = view.findViewById(R.id.breed_coverImg)
