@@ -19,14 +19,8 @@ class Repository {
 
     )
 
-
-    private val _dogImages = MutableLiveData<List<String>>()
-
-    val dogImages: LiveData<List<String>>
-        get() = _dogImages
-
-    suspend fun loadDogs(breed: String){
+    suspend fun loadDogs(breed: String): List<String> {
         val response: Response = ApiService.DogApi.retrofitService.getDogPics(breed)
-        _dogImages.value = response.dogList
+        return response.dogList
     }
 }
