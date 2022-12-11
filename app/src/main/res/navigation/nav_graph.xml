@@ -9,5 +9,18 @@
         android:id="@+id/mainFragment"
         android:name="com.example.dogapirepeat.ui.main.MainFragment"
         android:label="fragment_main"
-        tools:layout="@layout/fragment_main" />
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_breedFragment"
+            app:destination="@id/breedFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/breedFragment"
+        android:name="com.example.dogapirepeat.BreedFragment"
+        android:label="fragment_breed"
+        tools:layout="@layout/fragment_breed" >
+        <argument
+            android:name="breedKey"
+            app:argType="string" />
+    </fragment>
 </navigation>
