@@ -8,6 +8,7 @@
     </data>
 
     <FrameLayout
+        android:background="#380593"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".BreedFragment">
@@ -18,13 +19,14 @@
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/dog_recycler"
-                android:layout_width="418dp"
-                android:layout_height="628dp"
+                android:layout_width="match_parent"
+                android:layout_height="700dp"
+                android:background="@android:color/transparent"
                 app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
                 app:layout_constraintBottom_toTopOf="@+id/back_btn"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.41"
+                app:layout_constraintVertical_bias="0.0"
                 tools:listitem="@layout/dog_item">
 
             </androidx.recyclerview.widget.RecyclerView>

@@ -8,6 +8,7 @@
     <ImageView
         android:id="@+id/breed_coverImg"
         android:layout_width="match_parent"
+        android:layout_margin="8dp"
         android:layout_height="600dp"
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="0dp"
@@ -17,8 +18,8 @@
         android:id="@+id/breed_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="52dp"
-        android:textColor="#9E0000"
+        android:layout_marginBottom="40dp"
+        android:textColor="#FFFFFF"
         android:textSize="34sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"

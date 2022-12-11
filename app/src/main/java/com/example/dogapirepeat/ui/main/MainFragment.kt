@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.PagerSnapHelper
 import com.example.dogapirepeat.adapter.MainAdapter
 import com.example.dogapirepeat.databinding.FragmentMainBinding
 
@@ -29,6 +30,9 @@ class MainFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         val mainAdapter = MainAdapter()
         binding.breedRecycler.adapter = mainAdapter
+
+        val snapHelper = PagerSnapHelper()
+        snapHelper.attachToRecyclerView(binding.breedRecycler)
     }
 
 }

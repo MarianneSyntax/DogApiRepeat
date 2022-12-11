@@ -8,10 +8,15 @@ import com.example.dogapirepeat.data.model.Response
 class Repository {
 
     var dataset = listOf<Breed>(
-        Breed("Pug","https://images.dog.ceo//breeds//pug//n02110958_11239.jpg"),
+        Breed("Pug","https://images.dog.ceo/breeds/pug/n02110958_12761.jpg"),
         Breed("Beagle", "https://images.dog.ceo/breeds/beagle/n02088364_10108.jpg"),
-        // Breed("French Bulldog", "https://images.dog.ceo/breeds/bulldog-french/n02108915_1119.jpg"),
+        Breed("Airedale", "https://images.dog.ceo/breeds/airedale/n02096051_3045.jpg"),
         Breed("Weimaraner", "https://images.dog.ceo/breeds/weimaraner/n02092339_727.jpg"),
+        Breed("Dalmatian", "https://images.dog.ceo/breeds/dalmatian/cooper2.jpg"),
+        Breed("Eskimo", "https://images.dog.ceo/breeds/eskimo/n02109961_853.jpg"),
+        Breed("Husky", "https://images.dog.ceo/breeds/husky/n02110185_14597.jpg"),
+        Breed("Keeshond", "https://images.dog.ceo/breeds/keeshond/n02112350_6952.jpg")
+
     )
 
 

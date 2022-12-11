@@ -13,13 +13,14 @@
         tools:context=".DetailFragment">
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:background="#380593"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
             <ImageView
                 android:id="@+id/dogDetailImage"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="600dp"
                 app:layout_constraintBottom_toTopOf="@+id/back_button"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.498"
