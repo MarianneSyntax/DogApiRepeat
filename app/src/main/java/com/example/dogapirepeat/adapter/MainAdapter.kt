@@ -5,6 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
 import com.example.dogapirepeat.R
@@ -12,7 +13,7 @@ import com.example.dogapirepeat.data.model.Breed
 import com.example.dogapirepeat.data.remote.Repository
 import com.example.dogapirepeat.ui.main.MainFragmentDirections
 
-class BreedAdapter() : RecyclerView.Adapter<BreedAdapter.ItemViewHolder>() {
+class MainAdapter() : RecyclerView.Adapter<MainAdapter.ItemViewHolder>() {
     private var repo = Repository()
     private var dataset = repo.dataset
 
@@ -33,9 +34,10 @@ class BreedAdapter() : RecyclerView.Adapter<BreedAdapter.ItemViewHolder>() {
         // coil, um jeweils die Bilder mit .load() reinzuladen:
         holder.breedImage.load(item.imageResource)
         holder.breedName.text = item.name
+        val breedKey: String = item.name.lowercase()
 
         holder.breedImage.setOnClickListener {
-            //TODO
+            holder.itemView.findNavController().navigate(MainFragmentDirections.actionMainFragmentToBreedFragment(breedKey))
         }
 
     }
