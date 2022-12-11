@@ -9,7 +9,7 @@ import retrofit2.http.Path
 
 // 3 VARIABLEN, die von jeder ApiService Instanz nutzbar sein sollen: BASE_URL, moshi, retrofit
 
-const val BASE_URL = "https://dog.ceo/api"
+const val BASE_URL = "https://dog.ceo/api/"
 
 
 // speichert in der Variable moshi einen moshi Builder, der Json (Sprache der Antwort von der Website) in Kotlin konvertiert
