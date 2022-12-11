@@ -4,8 +4,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
+import com.example.dogapirepeat.BreedFragmentDirections
 import com.example.dogapirepeat.R
 
 class DogAdapter() : RecyclerView.Adapter<DogAdapter.ItemViewHolder>() {
@@ -28,6 +30,10 @@ class DogAdapter() : RecyclerView.Adapter<DogAdapter.ItemViewHolder>() {
     override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
         val item: String = dataset[position]
         holder.dogImage.load(item)
+
+        holder.dogImage.setOnClickListener {
+            holder.itemView.findNavController().navigate(BreedFragmentDirections.actionBreedFragmentToDetailFragment(item))
+        }
     }
 
     override fun getItemCount(): Int {
