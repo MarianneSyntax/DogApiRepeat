@@ -17,11 +17,6 @@ class DogAdapter() : RecyclerView.Adapter<DogAdapter.ItemViewHolder>() {
         val dogImage: ImageView = view.findViewById(R.id.dog_image)
     }
 
-    fun submitList(list: List<String>){
-        dataset = list
-        notifyDataSetChanged()
-    }
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {
         val itemLayout = LayoutInflater.from(parent.context).inflate(R.layout.dog_item,parent,false)
         return ItemViewHolder(itemLayout)
